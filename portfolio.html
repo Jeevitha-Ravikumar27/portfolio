@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/458a8346ee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="background-removed (16).png" class="logo">
+                <ul id="side">
+                    <li>
+                        <a href="portfolio.html">Home</a>
+                        <i class="fa-solid fa-house fa-bounce"></i>
+                    </li>
+                    <li>
+                        <a href="about2.html">About</a>
+                        <i class="fa-solid fa-address-card fa-shake"></i>
+                    </li>
+                    <li>
+                        <a href="proj.html">Projects</a>
+                        <i class="fa-solid fa-list-check fa-flip" ></i>
+                    </li>
+                    <li>
+                        <a href="cont.html">Contact</a>
+                        <i class="fa-solid fa-person fa-bounce" ></i>
+                    </li>
+                    <i class="fa-solid fa-circle-xmark" id="upv" onclick="closem()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" id="upw" onclick="openm()"></i>
+                
+            </nav>
+        </div>
+        <div class="headertext">
+            <p class="uv">WEB DEVELOPER</p>
+           <!-- <a target="_blank" href="http://codepen.io/Moslim/" class="white-mode"></a>-->
+            </div>
+
+
+
+    </div>
+
+    
+
+
+
+
+
+<script>
+    var links=document.getElementsByClassName("links");
+    var content=document.getElementsByClassName("content");
+
+    function opentab(tabname){
+        for(link of links){
+            link.classList.remove("active");
+        }
+        for(contents of content){
+            contents.classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("active");
+    }
+
+</script>
+
+<script>
+    var side=document.getElementById("side");
+    function openm(){
+        side.style.right="0";
+    }
+    function closem(){
+        side.style.right="-200";
+    }
+</script>
+
+
+
+
+
+</body>
+</html>

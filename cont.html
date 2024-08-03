@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/458a8346ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="background-removed (16).png" class="logo">
+            <ul id="side">
+                <li>
+                    <a href="portfolio.html">Home</a>
+                    <i class="fa-solid fa-house fa-bounce"></i>
+                </li>
+                <li>
+                    <a href="about2.html">About</a>
+                    <i class="fa-solid fa-address-card fa-shake"></i>
+                </li>
+                <li>
+                    <a href="proj.html">Projects</a>
+                    <i class="fa-solid fa-list-check fa-flip" ></i>
+                </li>
+                <li>
+                    <a href="cont.html">Contact</a>
+                    <i class="fa-solid fa-person fa-bounce" ></i>
+                </li>
+                <i class="fa-solid fa-circle-xmark" id="upv" onclick="closem()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="upw" onclick="openm()"></i>
+            
+        </nav>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <h2 class="subtitle">Contact Me <i class="fa-solid fa-phone fa-shake"></i></h2>
+                    <p>ravikumarjeevitha254@gmail.com <i class="fa-solid fa-message fa-bounce"></i>
+                    </p>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/jeevitha-ravikumar-24bb94235"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Jeevitha-Ravikumar27"><i class="fa-brands fa-github"></i></a>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name " required>
+                        <input type="email" name="email" placeholder="Your Email Id" required>
+                        <textarea name="Message" id=""  rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>          
+        </div>
+        <div class="copy">
+            <p>Copyright @Jeevitha. Made with  <i class="fa-solid fa-heart fa-beat" style="color: #f6132a;"></i>
+            by Jeevitha Ravikumar.</p>
+        </div>
+    </div>
+
+    <script>
+        var links=document.getElementsByClassName("links");
+        var content=document.getElementsByClassName("content");
+    
+        function opentab(tabname){
+            for(link of links){
+                link.classList.remove("active");
+            }
+            for(contents of content){
+                contents.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active");
+        }
+    
+    </script>
+    
+    <script>
+        var side=document.getElementById("side");
+        function openm(){
+            side.style.right="0";
+        }
+        function closem(){
+            side.style.right="-200";
+        }
+    </script>
+</body>
+</html>

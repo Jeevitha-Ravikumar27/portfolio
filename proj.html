@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/458a8346ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="background-removed (16).png" class="logo">
+            <ul id="side">
+                <li>
+                    <a href="portfolio.html">Home</a>
+                    <i class="fa-solid fa-house fa-bounce"></i>
+                </li>
+                <li>
+                    <a href="about2.html">About</a>
+                    <i class="fa-solid fa-address-card fa-shake"></i>
+                </li>
+                <li>
+                    <a href="proj.html">Projects</a>
+                    <i class="fa-solid fa-list-check fa-flip" ></i>
+                </li>
+                <li>
+                    <a href="cont.html">Contact</a>
+                    <i class="fa-solid fa-person fa-bounce" ></i>
+                </li>
+                <i class="fa-solid fa-circle-xmark" id="upv" onclick="closem()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="upw" onclick="openm()"></i>
+            
+        </nav>
+    </div>
+    <div class="projects">
+        <h3  class="subtitle ur">MY TOP PROJECTS</h3>
+        <div class="prolist">
+            
+                <div class="i">
+                    <i class="fa-solid fa-code fa-bounce"></i>
+                    <h3>Amazon Clone</h3>
+                    <img src="https://freight.cargo.site/w/1200/i/f031523a458b0b2f96dc6af46f71b621037b6789ee605d7e24fd7453d9d4ec16/1.gif" >
+                    <a href="https://rawcdn.githack.com/Jeevitha-Ravikumar27/Amazon-Clone/dc2adee3ef39b3ab822c1a1b299f4ea301d11f5b/amazon.html">Visit</a>
+                </div>
+                <div class="i">
+                    <i class="fa-solid fa-crop fa-spin"></i>
+                    <h3>Ecommerce Website</h3>
+                    <img src="https://i.pinimg.com/originals/ec/58/a9/ec58a942c75e8656255f44e5969c4d2e.gif" >
+                    <a href="https://rawcdn.githack.com/Jeevitha-Ravikumar27/website2/bc42fefe0099a88e55864515f360f00275d0a580/website2.html">Visit</a>
+                </div>
+                <div class="i">
+                    <i class="fa-brands fa-app-store fa-shake"></i>
+                    <h3>College Website</h3>
+                    <img src="https://learnworthy.net/wp-content/uploads/2019/07/web-developing.png" >
+                    <a href="https://rawcdn.githack.com/Jeevitha-Ravikumar27/website1/072f28279fa86ba693ba7a0c936c032b0741dfe2/clgweb.html">Visit</a>
+                </div>
+            
+            
+
+        </div>
+    </div>
+
+    <script>
+        var links=document.getElementsByClassName("links");
+        var content=document.getElementsByClassName("content");
+    
+        function opentab(tabname){
+            for(link of links){
+                link.classList.remove("active");
+            }
+            for(contents of content){
+                contents.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active");
+        }
+    
+    </script>
+    
+    <script>
+        var side=document.getElementById("side");
+        function openm(){
+            side.style.right="0";
+        }
+        function closem(){
+            side.style.right="-200";
+        }
+    </script>
+</body>
+</html>

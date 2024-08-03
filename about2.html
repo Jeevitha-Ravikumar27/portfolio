@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/458a8346ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="background-removed (16).png" class="logo">
+            <ul id="side">
+                <li>
+                    <a href="portfolio.html">Home</a>
+                    <i class="fa-solid fa-house fa-bounce"></i>
+                </li>
+                <li>
+                    <a href="about2.html">About</a>
+                    <i class="fa-solid fa-address-card fa-shake"></i>
+                </li>
+                <li>
+                    <a href="proj.html">Projects</a>
+                    <i class="fa-solid fa-list-check fa-flip" ></i>
+                </li>
+                <li>
+                    <a href="cont.html">Contact</a>
+                    <i class="fa-solid fa-person fa-bounce" ></i>
+                </li>
+                <i class="fa-solid fa-circle-xmark" id="upv" onclick="closem()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="upw" onclick="openm()"></i>
+            
+        </nav>
+    </div>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="https://cdn.dribbble.com/users/1857592/screenshots/3848396/character-typing.gif" width="300">
+                </div>
+                    <div class="col2">
+                        <details>
+                        <summary id="subtitle">ABOUT ME</summary>
+                        <p id="clr">Hi, I'm Jeevitha , A Passionate Full Stack Developer ,Proficient in both front-end and back-end technologies.My Expertise Lies within Front
+                            end and the main languages in tech stack are Html,CSS,Javascript.I’m a perpetual learner, diving into new frameworks and languages.
+                            I have a great Understanding on back-end Technologies like Node.js and Express.js and Familiar with Control Systems like Git and Github.I specialize in creating Responsive Websites Using Front-end and Back-end Technologies.</p>
+                        </details>
+                            <div class="tab">
+                            <p class="links active" onclick="opentab('skills')">Skills</p>
+                            <p class="links"onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class="content active" id="skills">
+                            <ul>
+                                <li><span>Front End</span><br> Html Css Bootstrap Javascript React </li>
+                                <li><span>Back End</span><br>Node.js Express.js</li>
+                                <li><span>Data Base</span><br>MongoDB</li>
+                            </ul>
+                         </div> 
+                         <div class="content" id="education">
+                            <ul>
+                                <li><span>SRM EEC</span><br> Bachelor Degree in Computer Science Engineering with Specialisation in Cyber Security </li>
+                               
+                            </ul>
+                         </div>   
+                    </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var links=document.getElementsByClassName("links");
+        var content=document.getElementsByClassName("content");
+    
+        function opentab(tabname){
+            for(link of links){
+                link.classList.remove("active");
+            }
+            for(contents of content){
+                contents.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active");
+        }
+    
+    </script>
+    
+    <script>
+        var side=document.getElementById("side");
+        function openm(){
+            side.style.right="0";
+        }
+        function closem(){
+            side.style.right="-200";
+        }
+    </script>
+</body>
+</html>
